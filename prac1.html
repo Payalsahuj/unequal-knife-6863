@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0px 20px;
+            height: 70px;
+            align-items: center;
+            background-color: #d9d9d9;
+
+        }
+
+        #container>div {
+            display: flex;
+            gap: 30px;
+        }
+
+        #drop {
+            border-color: #d9d9d9;
+            background-color: #d9d9d9;
+            font-size: 15px;
+        }
+
+        #child {
+            display: block;
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        #containerT {
+            background-image: url("https://th.bing.com/th/id/OIP.sWumNeS9QJDUd8pPI799ngHaDt?pid=ImgDet&rs=1");
+            width: 100%;
+            height: 450px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #containerF {
+            position: absolute;
+            background-color: white;
+
+        }
+
+        #containerF>div {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            padding: 0px 120px;
+        }
+
+        #eventpart {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0px 20px;
+        }
+
+        #first {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            margin-top: 20px;
+
+        }
+
+        #flisec {
+            margin: 30px 0px;
+        }
+
+        #first>input {
+            width: 180px;
+            height: 40px;
+            border-radius: 7px;
+        }
+
+        #search {
+
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 150px;
+            height: 40px;
+            background-color: #2980B9;
+            color: white;
+            font-size: 20px;
+            border-radius: 7px;
+
+        }
+
+        h3,
+        h6,
+        input,
+        select,
+        button:hover {
+            cursor: pointer;
+        }
+
+        #search:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        #second {
+            margin-top: 20px;
+        }
+
+        #banner {
+            text-align: left;
+            display: flex;
+            width: 80%;
+            margin: auto;
+            margin-top: 80px;
+            gap: 35px;
+            font-size: 13px;
+        }
+
+        #banner>div>img {
+            width: 100%;
+            border-radius: 7px;
+
+        }
+
+        #banner>div:hover {
+            transform: scale(1.1);
+        }
+
+        #bannertwo-text-1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_AllInclusive_imgB_1199x399_20211104.jpg");
+            width: 50%;
+
+        }
+
+        #bannertwo-text-1:hover {
+            transform: scale(1.1);
+
+        }
+
+        #bannertwo-text-2:hover {
+            transform: scale(1.1);
+        }
+
+        #bannertwo-text-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_LastMinute_imgB_1199x399_20211104.jpg");
+            width: 50%;
+
+        }
+
+        #bannertwo {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            gap: 40px;
+            height: 250px;
+        }
+
+        #bannertwo button {
+            width: 25%;
+            height: 17%;
+            border-radius: 7px;
+            border-color: white;
+            color: blue;
+            font-size: 13px;
+        }
+
+        #bannertwo>div {
+
+            margin-top: 30px;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 7px;
+
+
+        }
+
+        #bannertwo button:hover {
+            transform: scale(1.1);
+        }
+
+        #bannerthree {
+            width: 80%;
+            margin: auto;
+        }
+
+        #manage {
+            display: flex;
+            gap: 20px;
+        }
+
+        #manage>div {
+            border-radius: 7px;
+            height: 190px;
+        }
+
+        #manage1 {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_Beach_imgB_900x506_20211104.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            width: 100%;
+        }
+
+        #manage1>div {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        #manage2 {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_Car_imgB_900x506_20211104.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            width: 100%;
+        }
+
+        #manage2>div {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        #manage3 {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_MOD_imgB_900x506_20211104.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            width: 100%;
+        }
+
+        #manage3>div {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        #manage4 {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_VacationRentals_imgB_900x506_20211104.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            width: 100%;
+        }
+
+        #manage4>div {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        #bannerfour{
+            margin: auto;
+            width: 80%;
+        }
+        #bannerfour1{
+            display: flex;
+        }
+        #imageins{
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/08/TVLY_Storefront_Family_imgB_1200x674_20211104.jpg");
+            position: relative;;
+        }
+        imageins1{
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="container">
+        <div>
+            <img src="./image/Travela Swapna (2).jpg" height="70px" alt="">
+            <select name="" id="drop">
+                <option value="">More travel</option>
+                <option value="">Package</option>
+                <option value="">Stays</option>
+                <option value="">Cars</option>
+                <option value="">Flights</option>
+                <option value="">Cruises</option>
+                <option value="">Things to do</option>
+                <option value="">Trip for me</option>
+                <option value="">Discover</option>
+                <option value="">Travel Deals</option>
+                <option value="">Get Inspired</option>
+                <option value="">Groups </option>
+            </select>
+        </div>
+        <div id="child">
+            <h6>Espanol</h6>
+            <h6>List your property</h6>
+            <h6>Support</h6>
+            <h6>Trips</h6>
+            <h6>Sign in</h6>
+        </div>
+    </nav>
+    <div id="containerT">
+        <div id="containerF">
+            <div>
+                <h3 id="stay">Stays</h3>
+                <h3 id="flight">Flights</h3>
+                <h3 id="car">Cars</h3>
+                <h3 id="packages">Packages</h3>
+                <h3 id="thing">Things to do</h3>
+                <h3 id="cruises">Cruises</h3>
+            </div>
+            <hr>
+            <div id="eventpart">
+                <div id="first">
+                    <input style="width: 300px;" type="text">
+                    <input type="date">
+                    <input type="date">
+                    <input type="text">
+                </div>
+                <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="banner">
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_FitForYou_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                alt="">
+            <p>Plan a trip for the whole family—from family travel tips to family-friendly filters, our tools make it
+                easy.</p>
+        </div>
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_Transparency_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                alt="">
+            <p>Looking for a change of scenery, but want something flexible? With free cancellation on most hotels, you
+                can book with peace of mind.</p>
+        </div>
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/11/12/TVLY_StoreFrontRefresh_BrandPromise_GotYourBack_sfimg_562x240_20201111.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                alt="">
+            <p>Need more help along your journey? We offer 24/7 support on social and through virtual agents
+                onsite.We've</p>
+        </div>
+    </div>
+    <div id="bannertwo">
+
+
+        <div id="bannertwo-text-1">
+            <h2>All-inclusive resorts </h2>
+            <p>Think of nothing beyond having a great time with your family</p>
+            <button>View Details</button>
+        </div>
+
+
+
+        <div id="bannertwo-text-2">
+            <h2>All-inclusive resorts </h2>
+            <p>Think of nothing beyond having a great time with your family</p>
+            <button>View Details</button>
+        </div>
+
+    </div>
+    <div id="bannerthree">
+        <h1>Start planning your next trip</h1>
+        <div id="manage">
+            <div id="manage1">
+                <div>
+                    <h3>Sunny beach hotel offers</h3>
+                </div>
+            </div>
+            <div id="manage2">
+                <div>
+                    <h3>Car rental deals</h3>
+                </div>
+            </div>
+            <div id="manage3">
+                <div>
+                    <h3>Member discounts Member</h3>
+                </div>
+            </div>
+            <div id="manage4">
+
+                <div>
+                    <h3>Vacation rental offers</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bannerfour">
+        <h1>Featured offer</h1>
+        <div id="bannerfour1">
+            <div id="imageins">
+                <div id="imageins1">
+                    <h5>Family vacation deals</h5>
+                    <p>Seize your next unforgettable family vacation.</p>
+                </div>
+            </div>
+            <div>
+                <!-- image insert -->
+                <button>Book now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+    let stay = document.getElementById("stay")
+    stay.addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+        <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                        <input type="text">
+                    </div>
+                    <div id="second">
+                        <label for="">
+                            <input type="checkbox">
+                            Add a flight
+                        </label>
+                        <label for="">
+                            <input type="checkbox">
+                            Add a cart
+                        </label>
+                        <br>
+                        <button id="search">
+                            Search
+                        </button>
+                    </div>`;
+    })
+    document.getElementById("flight").addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+       <div>
+        <select name="" id="drop">
+                <option value="">Roadtrip</option>
+                <option value="">One-way</option>
+                <option value="">Multi-city</option>
+            </select>
+            <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                    </div>
+       <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+
+        </div>
+       `;
+    })
+
+    document.getElementById("car").addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+       <div>
+        <select name="" id="drop">
+                <option value="">Roadtrip</option>
+                <option value="">One-way</option>
+                <option value="">Multi-city</option>
+            </select>
+            <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                    </div>
+       <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+
+        </div>
+       `;
+    })
+
+    document.getElementById("packages").addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+       <div>
+        <select name="" id="drop">
+                <option value="">Roadtrip</option>
+                <option value="">One-way</option>
+                <option value="">Multi-city</option>
+            </select>
+            <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                    </div>
+       <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+
+        </div>
+       `;
+    })
+
+    document.getElementById("thing").addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+       <div>
+        <select name="" id="drop">
+                <option value="">Roadtrip</option>
+                <option value="">One-way</option>
+                <option value="">Multi-city</option>
+            </select>
+            <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                    </div>
+       <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+
+        </div>`;
+    })
+
+    document.getElementById("cruises").addEventListener("click", () => {
+        document.getElementById("eventpart").innerHTML = "";
+        document.getElementById("eventpart").innerHTML = `
+       <div>
+        <select name="" id="drop">
+                <option value="">Roadtrip</option>
+                <option value="">One-way</option>
+                <option value="">Multi-city</option>
+            </select>
+            <div id="first">
+                        <input style="width: 300px;" type="text">
+                        <input style="width: 300px;" type="text">
+                        <input type="date">
+                        <input type="date">
+                    </div>
+       <div id="second">
+                    <label for="">
+                        <input type="checkbox">
+                        Add a flight
+                    </label>
+                    <label for="">
+                        <input type="checkbox">
+                        Add a cart
+                    </label>
+                    <br>
+                    <button id="search">
+                        Search
+                    </button>
+                </div>
+
+        </div>
+       `;
+    })
+
+</script>

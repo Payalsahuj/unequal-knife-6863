@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #main{
+            background-color: rgb(236, 246, 253);
+        }
         #container {
             display: flex;
             flex-direction: row;
@@ -66,14 +69,12 @@
         #eventpart {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             padding: 0px 20px;
         }
 
         #first {
             display: flex;
-            justify-content: space-between;
-            gap: 50px;
+            gap: 20px;
             margin-top: 20px;
 
         }
@@ -283,11 +284,92 @@
             margin: auto;
             margin-top: 40px;
         }
+        #bannerfive{
+            width: 80%;
+            margin: auto;
+        }
+        #bannerfive1{
+            display: flex;
+            justify-content: space-between;
+        }
+        #bannerfive1>div{
+            background-color: white;
+            width: 360px;
+            padding-left: 15px;
+            border-radius: 7px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        #bannerfive1>div:hover{
+            cursor: pointer;
+        }
+        #bannersix{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 250px 560px 240px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            gap:40px;
+            background-color: whitesmoke;
+        }
+        #bannersix button{
+            border-radius: 7px;
+            border-color: white;
+            background-color: blue;
+            color: white;
+            font-size: 13px;
+        }
+     
+        #butto,#selo,#numbo{
+        width: 150px;
+        font-size: 15px;
+        padding: 6px 0px;
+        margin-left: 20px;
+       }
+       #bannerseven{
+        width: 80%;
+        margin: auto;
+       }
+       #bannerseven>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+       }
+       #bannerseven>div>div:nth-child(7){
+        grid-area: 4/1/5/3;
+       }
+       #bannerseven>div>div select{
+        width: 100%;
+        height:55px;
+        border-radius: 7px;
+        font-size: 20px;
+        padding-left: 20px;
+       
+       }
+       #bannereight{
+        width: 80%;
+        margin: auto;
+       }
+       #bannereight>table{
+        width: 100%;
+        height: 400px;
+        text-align: left;
         
+       }
+       #bannernine{
+        width: 80%;
+        margin: auto;
+       }
+       table{
+        background-color: white;
+        padding: 10px 10px;
+       }
+       th,td:hover{
+        cursor: pointer;
+       }
     </style>
 </head>
 
 <body>
+    <div id="main">
 
     <nav id="container">
         <div>
@@ -433,7 +515,270 @@
     </div>
     <div id="bannerfive">
         <h1>Here to help keep you on the move</h1>
+        <div id="bannerfive1">
+        <div>
+            <h3>Change or cancel a trip</h3>
+            <p>Make updates to your itinerary or cancel a booking</p>
+        </div>
+        <div>
+            <h3>Use a credit or coupon</h3>
+            <p>Apply a coupon code or credit to a new trip</p>
+        </div>
+        <div>
+         
+            <h3>Track your refund</h3>
+            <p>Check the status of a refund currently in progress</p>
+              
+        </div>
     </div>
+        <div id="bannersix">
+            <div>
+                <img style="width: 100%; height: 100%;" src="https://a.travel-assets.com/mad-service/footer/marquee/TVLY_App_Footer_v1.jpg" alt="">
+            </div>
+            <div style="margin-top: 35px;">
+                <h2>Wander Wisely with the Travelocity app</h2>
+                <ul>
+                    <li> Get helpful alerts about flight status and gate numbers</li>
+                    <li>Access all your travel details, even when offline</li>
+                    <li> Easily contact your hotel by messaging them right in the app</li>
+                </ul>
+                <h3>Text yourself a download link</h3>
+                <div>
+                    <select name="" id="selo">
+                        <option value="">Country code</option>
+                        <option value=""> USA+1</option>
+                        <option value="">United Kingdom +44</option>
+                        <option value="">Thailand +66</option>
+                        <option value="">Taiwan +886</option>
+                        <option value="">Switzerland +41</option>
+                        <option value="">Sweden +46</option>
+                        <option value="">Spain +34</option>
+                        <option value="">South Korea +82</option>
+                        <option value="">Sinapore +65</option>
+                        <option value="">Philippines +63</option>
+                        <option value="">Norway +47</option>
+                        <option value="">New Zealand +64</option>
+                        <option value="">Netherlands +31</option>
+                        <option value="">Mexico +52</option>
+                        <option value="">Japan +81</option>
+                        <option value="">Italy +39</option>
+                        <option value="">Ireland +91</option>
+                        <option value="">India +91</option>
+                        <option value="">Hong Kong sar +852</option>
+                        <option value="">Germany +49</option>
+                        <option value="">France +33</option>
+                        <option value="">Finland +358</option>
+                        <option value="">Denmark +45</option>
+                        <option value="">Canada +1</option>
+                        <option value="">Brazil +55</option>
+                        <option value="">Belgium +32</option>
+                        <option value="">Austria +43</option>
+                        <option value="">Australia +61</option>
+                        <option value="">Argentina +54</option>
+                        
+                    </select>
+                    <input id="numbo" type="number" placeholder="Phone number">
+                    <button id="butto">Get the app</button>
+                </div>
+                <p>By providing your number, you agree to receive a one-time automated text message with a link to get the app. Standard text message rates may apply.</p>
+            </div>
+            <div>
+                
+                <img style="width:250px; height:210px; margin-top: 10px;" src="./image/qrcode_a.travel-assets.com.png" alt="">
+                <h2 style="text-align:center">Scan the QR code</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="bannerseven">
+        <h1>Destination idea to plan your next trip</h1>
+        <div>
+            <div>
+                <select name="" id="hotels">
+                    <option value="">Hotels</option>
+                    <option value="">Chicago Hotels</option>
+                    <option value="">San Jose Hotels</option>
+                    <option value="">Baltimore Hotels</option>
+                    <option value="">Las Vegas Hotels</option>
+                    <option value="">Maui Hotels</option>
+                    <option value="">Oakland Hotels</option>
+                    <option value="">Fort Walton Beach Hotela</option>
+                    <option value="">Washington, DC Hotels</option>
+                    <option value="">London Hotels</option>
+                    <option value="">Paris Hotels</option>
+                    <option value="">Cancun Hotels</option>
+                    <option value="">Punta Cana Hotels</option>
+                </select>
+            </div>
+            <div>
+                <select name="" id="flights">
+                    <option value="">Flights</option>
+                    <option value="">Flights to London</option>
+                    <option value="">Flights to Maui</option>
+                    <option value="">Flights to Washington,DC</option>
+                    <option value="">Flights to Fort Lauderdale</option>
+                    <option value="">Flights to St. Louis</option>
+                    <option value="">Flights to Frankfurt</option>
+                    <option value="">Flights to Barcelona</option>
+                    <option value="">Flights to Baltimore</option>
+                    <option value="">Flights to Paris</option>
+                    <option value="">Flights to Orange Country</option>
+                    <option value="">Flights to Honolulu</option>
+                    <option value="">Flights to Cabos</option>
+                </select>
+            </div>
+            <div>
+                <select name="" id="vacation">
+                    <option value="">Vacation Packages</option>
+                    <option value="">Orlando Vacations</option>
+                    <option value="">San Diego Vacations</option>
+                    <option value="">Miami Vacations</option>
+                    <option value="">Nassau Vacations</option>
+                    <option value="">Seattle Vacations</option>
+                    <option value="">San Francisco Vacations</option>
+                    <option value="">Denver Vacations</option>
+                    <option value="">Montego Vacations</option>
+                    <option value="">Los Angles Vacations</option>
+                    <option value="">Las Vegas Vacations</option>
+                    <option value="">Cancum Vacations</option>
+                    <option value="">Cozumel Vacations</option>
+                </select>
+            </div>
+            <div>
+                <select name="" id="cars">
+                    <option value="">Cars</option>
+                    <option value="">London Cra Rentals</option>
+                    <option value="">Maui Cra Rentals</option>
+                    <option value="">Fort Lauderdale Cra Rentals</option>
+                    <option value="">Honolulu Cra Rentals</option>
+                    <option value="">Newark Cra Rentals</option>
+                    <option value="">San Juan Cra Rentals</option>
+                    <option value="">Dublin Cra Rentals</option>
+                    <option value="">Barcelona Cra Rentals</option>
+                    <option value="">Washington Cra Rentals</option>
+                    <option value="">West Palm Beach Cra Rentals</option>
+                    <option value="">Madrid Cra Rentals</option>
+                    <option value="">Paris Cra Rentals</option>
+                </select>
+            </div>
+            <div>
+                <select name="" id="cruises">
+                    <option value="">Cruises</option>
+                    <option value="">Bahamas Cruises</option>
+                    <option value="">Canada/New Cruises</option>
+                    <option value="">Hawaii Cruises</option>
+                    <option value="">Mexico Cruises</option>
+                    <option value="">Australia/New Zealand Cruises</option>
+                    <option value="">Alaskan Cruises</option>
+                    <option value="">European Cruises</option>
+                    <option value="">Bermuda Cruises</option>
+                    <option value="">South Pacific Cruises</option>
+                    <option value="">Panama Canal Cruises</option>
+                </select>
+            </div>
+            <div>
+                <select name="" id="resor">
+                    <option value="">All Inclusive resorts</option>
+                    <option value="">Top All-Inclusive Resorts</option>
+                    <option value="">All Inclusive Resorts Adults Only</option>
+                    <option value="">All Inclusive Beach Resorts </option>
+                    <option value="">All Inclusive Family Resorts</option>
+                    <option value="">Cheap All Inclusive Resorts</option>
+                    <option value="">All Inclusive Resorts Couples Only</option>
+                    <option value="">Best All Inclusive Resorts for Couples on a Budget</option>
+                    <option value="">Luxury All Inclusive Resorts Adults Only</option>
+                    <option value="">Best Adults OnlyAll Inclusive Resorts for Couples</option>
+
+                </select>
+            </div>
+            <div>
+                <select name="" id="traveldeals">
+                    <option value="">Vacation Package Deals</option>
+                    <option value="">Travel Deals</option>
+                    <option value="">Daily Travel Deals</option>
+                    <option value="">Hotel Deals</option>
+                    <option value="">Travelo/ swapna Coupon Cose</option>
+                    <option value="">Last Minute Travel Deals</option>
+                    <option value="">Hotels Under $99</option>
+                    <option value="">All Inclusive Reort Deals</option>
+                    <option value="">Flights Under $200</option>
+                    <option value="">All our Destination</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="bannereight">
+        <h2>Travelo/ Swapna group</h2>
+        <table>
+            <thead>
+                <tr>
+                <th>Company</th>
+                <th>Explore</th>
+                <th>Policies</th>
+                <th>Help</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>About</td>
+                    <td>Hotels in United States</td>
+                    <td>Privacy Policy</td>
+                    <td>Support</td>
+                </tr>
+                <tr>
+                    <td>Jobs</td>
+                    <td>Vacation Rentals in United States</td>
+                    <td>Terms of Use</td>
+                    <td>Cancel your hotel or vacation rental booking</td>
+                </tr>
+                <tr>
+                    <td>List your property</td>
+                    <td>Vacation Packages in United States</td>
+                    <td>Vrbo terms and conditions</td>
+                    <td>Cancel your flight</td>
+                </tr>
+                <tr>
+                    <td>Partnerships</td>
+                    <td>Domestic Flights</td>
+                    <td>Accessibility</td>
+                    <td>Refund timelines, policies & processes</td>
+                </tr>
+                <tr>
+                    <td>Newsroom</td>
+                    <td>Car Rentals in United States</td>
+                    <td>Your Privacy Choices</td>
+                    <td>Use a Travelocity coupon</td>
+                </tr>
+                <tr>
+                    <td>Investor Relations</td>
+                    <td>Travelo/swapna Reviews</td>
+                    
+                </tr>
+                <tr>
+                    <td>Roaming Gnome Store</td>
+                    <td>Roaming Gnome Store</td>
+                    
+                </tr>
+                <tr>
+                    <td>Advertising</td>
+                    <td>Unique Places to Stay</td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Travel Blog</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+    <div id="bannernine">
+        <hr>
+    <p>© 2022 Travelscape LLC, an Expedia Group Company. All rights reserved.</p>
+    <P> Travelocity, the Stars Design, and The Roaming Gnome Design are trademarks or registered trademarks of Travelscape LLC. CST# 2056372-50</P>
+    </div>
+</div>
 </body>
 
 </html>
@@ -634,3 +979,4 @@
     })
 
 </script>
+

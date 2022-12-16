@@ -1,0 +1,80 @@
+[
+    {
+        "id":"Raipur",
+        "image":"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/14000000/13400000/13396500/13396463/c2d22074_b.jpg",
+        "stay":"Courtyard by Marriott",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.6/10 Excellent (36 reviews)",
+        "cost":"$97",
+        "costdetails":"$109 total includes taxes & fees"
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/19000000/18350000/18341000/18340918/c4bc0712.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Sayaji Raipur",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.0/10 Very Good (15 reviews)",
+        "cost":"$50",
+        "costdetails":"$56 total includes taxes & fees"   
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/8000000/7070000/7065500/7065412/3df89c7e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Hyatt Raipur",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.4/10 Excellent (63 reviews)",
+        "cost":"$62",
+        "costdetails":"$69 total includes taxes & fees"
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/14000000/13400000/13396500/13396463/42a93852.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Courtyard by Marriott Raipur",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.6/10 Excellent (36 reviews)",
+        "cost":"$97",
+        "costdetails":"$109 total includes taxes & fees"   
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/27000000/26550000/26548400/26548364/20789528.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Hotel Mayura",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"10.0/10 Exceptional (2 reviews)",
+        "cost":"$38",
+        "costdetails":"$43 total includes taxes & fees"   
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/9000000/8830000/8821700/8821682/4dca0f0e.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Hotel Babylon Inn",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.6/10 Excellent (36 reviews)",
+        "cost":"$97",
+        "costdetails":"$109 total includes taxes & fees"   
+    },
+    {
+        "id":"Raipur",
+        "image":"https://images.trvl-media.com/hotels/89000000/88200000/88192300/88192226/w668h454x10y0-fea7114f.jpg?impolicy=resizecrop&rw=455&ra=fit",
+        "stay":"Orange Eye Resort",
+        "place":"Raipur",
+        "speciality":"Book Now & Enjoy complimentary WIfi",
+        "details":"Fully refundable",
+        "score":"8.6/10 Very Good (310 reviews)",
+        "cost":"$35",
+        "costdetails":"$40 total includes taxes & fees"   
+    }
+    
+]

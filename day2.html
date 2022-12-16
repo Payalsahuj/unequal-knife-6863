@@ -36,7 +36,7 @@
             display: block;
             display: flex;
             flex-direction: row;
-            width: 400px;
+            width: 530px;
             justify-content: space-between;
             font-size: 20px;
         }
@@ -390,11 +390,11 @@
             </select>
         </div>
         <div id="child">
-            <h6>Espanol</h6>
-            <h6>List your property</h6>
-            <h6>Support</h6>
-            <h6>Trips</h6>
-            <h6>Sign in</h6>
+            <a href=""><h6>Espanol</h6></a>
+            <a href=""><h6>List your property</h6></a>
+            <a href=""><h6>Support</h6></a>
+            <a href=""><h6>Trips</h6></a>
+           <a href="./signin.html"> <h6>Sign in</h6></a>
         </div>
     </nav>
     <div id="containerT">
@@ -410,7 +410,7 @@
             <hr>
             <div id="eventpart">
                 <div id="first">
-                    <input style="width: 300px;" type="text">
+                    <input id="location" style="width: 300px;" type="text">
                     <input type="date">
                     <input type="date">
                     <input type="text">
@@ -976,6 +976,14 @@
 
         </div>
        `;
+    })
+
+    fetch("./file_json/landpage.json").then((res)=>{
+        let val=res.json;
+        console.log(val)
+    })
+    document.getElementById("search").addEventListener("click",()=>{
+        
     })
 
 </script>

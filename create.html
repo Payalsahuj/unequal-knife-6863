@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            padding-top: 1px;
+            text-align: center;
+            background-color: #0288D1;
+            color: aliceblue;
+        }
+        #main{
+            width: 30%;
+            margin: auto;
+        }
+        #main>div>form{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        #create{
+            height: 40px;
+            width: 100%;
+            font-size: 20px;
+            border-radius: 7px;
+            background-color:  #0288D1 ;
+            border-color:  #0288D1;
+            color: white;
+        }
+        #create:hover{
+            background-color: #35aef0;
+            cursor: pointer;
+        }
+        .inp{
+            width: 100%;
+            height: 40px;
+            border-radius: 7px;
+            font-size: 20px;
+        }
+        h5:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h5>TRAVELO/ SWAPANA</h5>
+        <hr>
+    </nav>
+    <div id="main">
+        <h1>Create an account</h1>
+        <div>
+        <form id="form" action="">   
+        <input id="email" class="inp" type="email" placeholder="Enter email">
+        <input id="first" class="inp" type="text" placeholder="First name">
+        <input id="last" class="inp" type="text" placeholder="Last name">
+        <input id="pass" class="inp" type="password" placeholder="Enter password" autocomplete="on">
+        <label for=""><input type="checkbox">Keep me signed in</label>
+        <p>Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
+        <p>By creating an account, I agree to the Travelocity Terms and Conditions and Privacy Statement.</p>
+        <input id="create" type="submit" value="Create">
+        </form>
+        <h5 style="text-align: center; color: #0288D1;">Already have an account? <a href="./signin.html">Sign in</a></h5>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let form=document.getElementById("form")
+    let create=document.getElementById("create");
+    let taken=JSON.parse(localStorage.getItem("info")) || [];
+    
+    let arr=[]
+  
+    form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        let obj={
+            email:form.email.value,
+            first:form.first.value,
+            last:form.last.value,
+            pass:form.pass.value
+
+        }
+       
+        arr.push(obj);
+        localStorage.setItem("info",JSON.stringify(arr))
+    })
+
+</script>

@@ -60,10 +60,18 @@
 </html>
 <script>
      let taken=JSON.parse(localStorage.getItem("info")) || [];
+     console.log(taken)
      let form=document.getElementById("form")
      form.addEventListener("submit",(event)=>{
         event.preventDefault();
-        console.log(form.email.value)
+        taken.forEach((element)=>{
+            if(element.email==form.email.value  &&  element.pass==form.password.value){
+                window.location.href="landpage.html";
+            }
+            else{
+                alert("Wrong credentials");
+            }
+        })
      })
     
 </script>

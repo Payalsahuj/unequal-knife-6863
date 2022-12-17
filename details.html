@@ -49,8 +49,17 @@
 </body>
 </html>
 <script>
+
+
     let container=document.getElementById("container");
     let local=localStorage.getItem("store") || [];
+
+    let taken=JSON.parse(localStorage.getItem("info")) || [];
+    if(taken.length==0){
+       alert("You haven't login yet") 
+       window.location.href="signin.html"
+    }
+    else{
     fetch("./file_json/detailofse.json").then((res)=>{
         let val=res.json();
         return val;
@@ -93,12 +102,15 @@
                 parent.append(divimg,divdetails,divamount);
                 container.append(parent);
 
-
                 parent.addEventListener("click",()=>{
-                    window.location.href="";
+                    
+                    window.location.href="booking.html";
                 })
+
+
             }
         })
+    }
     }
 
 </script>

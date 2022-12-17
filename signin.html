@@ -60,8 +60,16 @@
 </html>
 <script>
      let taken=JSON.parse(localStorage.getItem("info")) || [];
-     console.log(taken)
-     let form=document.getElementById("form")
+     let email=document.getElementById("email");
+
+     let form=document.getElementById("form");
+     if(taken==""){
+        form.addEventListener("submit",(event)=>{
+            alert("You have to create your Account first");
+            window.location.href="create.html";
+        })
+     }
+  
      form.addEventListener("submit",(event)=>{
         event.preventDefault();
         taken.forEach((element)=>{
@@ -69,9 +77,10 @@
                 window.location.href="landpage.html";
             }
             else{
-                alert("Wrong credentials");
+                alert("Wrong credentials");  
             }
         })
+        
      })
     
 </script>

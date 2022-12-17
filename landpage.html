@@ -627,11 +627,12 @@
        displaydata(ans);
    })
 
-
    let loc=document.getElementById("location");
+   
    localStorage.getItem("store") || [];
   
    function displaydata(data){
+    
        document.getElementById("search").addEventListener("click",()=>{
         
            data.forEach((element)=>{
@@ -640,6 +641,7 @@
                    localStorage.setItem("store",loc.value);
                }
            })
+           
        })
    }
  

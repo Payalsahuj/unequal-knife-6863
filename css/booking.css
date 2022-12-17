@@ -110,6 +110,26 @@ width: 60%;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#bannersix>div{
+#banner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+    
+}
+@media screen and (max-width: 700px) {
+    #banner{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #bannerseven{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    
+    
    
 }

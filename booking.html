@@ -239,33 +239,36 @@
 </body>
 </html>
 <script>
-    let city=localStorage.getItem("store")
-    console.log(city)
-    fetch("./file_json/detailofse.json").then((res)=>{
-        let val=res.json();
-        return val;
-    })
-    .then((ans)=>{
-        displaydata(ans);
-    })
+    let info=JSON.parse(localStorage.getItem("details"));
+    
+    
 
     let cont=document.getElementById("banner")
+    let div1=document.createElement("div");
+    let div2=document.createElement("div");
+    let div3=document.createElement("div");
+    let div4=document.createElement("div");
+    let div5=document.createElement("div");
+    let div6=document.createElement("div");
    
-    function displaydata(data){
-       
-        data.forEach((element)=>{
         let image=document.createElement("img");
-        image.setAttribute("src",element.image);
+        image.setAttribute("src",info.image);
         let image1=document.createElement("img");
-        image1.setAttribute("src",element.image1);
+        image1.setAttribute("src",info.image1);
         let image2=document.createElement("img");
-        image2.setAttribute("src",element.image2);
+        image2.setAttribute("src",info.image2);
         let image3=document.createElement("img");
-        image3.setAttribute("src",element.image3);
+        image3.setAttribute("src",info.image3);
         let image4=document.createElement("img");
-        image4.setAttribute("src",element.image4);
-        banner.append(image,image1,image2,image3,image4)
-        })
-
-    }
+        image4.setAttribute("src",info.image4);
+        let image5=document.createElement("img");
+        image5.setAttribute("src",info.image5);
+        div1.append(image);
+        div2.append(image1);
+        div3.append(image2);
+        div4.append(image3);
+        div5.append(image4);
+        div6.append(image5)
+        banner.append(div1,div2,div3,div4,div5,div6);
+       
 </script>

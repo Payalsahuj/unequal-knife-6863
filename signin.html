@@ -60,10 +60,27 @@
 </html>
 <script>
      let taken=JSON.parse(localStorage.getItem("info")) || [];
-     let form=document.getElementById("form")
+     let email=document.getElementById("email");
+
+     let form=document.getElementById("form");
+     if(taken==""){
+        form.addEventListener("submit",(event)=>{
+            alert("You have to create your Account first");
+            window.location.href="create.html";
+        })
+     }
+  
      form.addEventListener("submit",(event)=>{
         event.preventDefault();
-        console.log(form.email.value)
+        taken.forEach((element)=>{
+            if(element.email==form.email.value  &&  element.pass==form.password.value){
+                window.location.href="landpage.html";
+            }
+            else{
+                alert("Wrong credentials");  
+            }
+        })
+        
      })
     
 </script>

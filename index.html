@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #opening{
+            display: flex;
+            justify-content: center;
+            margin-top: 160px;
+        }
+    </style>
+</head>
+<body>
+   <div id="opening"></div> 
+</body>
+</html>
+<script>
+    let opening=document.getElementById("opening");
+    let image=document.createElement("img")
+    image.setAttribute("src","./image/intro.jpg");
+    opening.append(image);
+    setTimeout(function(){
+       window.location.href="landpage.html"
+    },6000);
+    
+</script>

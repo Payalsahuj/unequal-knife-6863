@@ -52,7 +52,8 @@
             <hr>
             <div id="eventpart">
                 <div id="first">
-                    <input id="location" style="width: 300px;" type="text">
+                    
+                    <input id="location" style="width: 300px;" type="text" placeholder="Going to">
                     <input type="date">
                     <input type="date">
                     <input type="text">
@@ -636,7 +637,7 @@
        document.getElementById("search").addEventListener("click",()=>{
         
            data.forEach((element)=>{
-               if(element.place==loc.value){
+               if(element.place.toLowerCase()==loc.value.toLowerCase()){
                    window.location.href="details.html";
                    localStorage.setItem("store",loc.value);
                }

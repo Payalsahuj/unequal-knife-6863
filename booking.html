@@ -51,7 +51,7 @@
                            <div class="side">
                             <h3>$183</h3>
                             <p>$216 total includes taxes & fees</p>
-                            <button>Pay now</button>
+                            <button id="pay now">Pay now</button>
                         </div> 
                         </div>
                         <h3>Pay when you stay -</h3>
@@ -390,5 +390,10 @@
         document.body.classList.remove("popup-active")
     });
 
+
+    let paynow=document.getElementById("pay now");
+    paynow.addEventListener("click",function(){
+        window.location.href="paynow.html";
+    });
 
 </script>
